@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1/6 Cho Em Bé ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg, #ffe4ec, #fff8f0);
+        overflow-x: hidden;
+      }
+      .cloud {
+        position: absolute;
+        opacity: 0.5;
+        animation: float 20s linear infinite;
+      }
+      @keyframes float {
+        from {
+          transform: translateX(-150px);
+        }
+        to {
+          transform: translateX(calc(100vw + 150px));
+        }
+      }
+      .gift {
+        animation: shake 1s infinite;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        25% {
+          transform: rotate(-3deg);
+        }
+        75% {
+          transform: rotate(3deg);
+        }
+      }
+      .polaroid {
+        transform: rotate(var(--r));
+        transition: 0.3s;
+      }
+      .polaroid:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+      .star {
+        position: absolute;
+        color: white;
+        animation: twinkle 2s infinite;
+      }
+      @keyframes twinkle {
+        50% {
+          opacity: 0.3;
+        }
+      }
+      .shooting {
+        position: absolute;
+        top: 20%;
+        left: -100px;
+        color: white;
+        animation: shoot 5s linear infinite;
+      }
+      @keyframes shoot {
+        to {
+          transform: translate(120vw, 40vh);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cloud text-5xl" style="top: 60px">☁️</div>
+    <div class="cloud text-4xl" style="top: 120px; animation-delay: 8s">☁️</div>
+
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center p-6"
+    >
+      <div class="text-8xl">🧸💕🧸</div>
+      <h1 class="text-4xl font-bold mt-6">
+        Chúc em bé có một ngày 1/6 thật vui ❤️
+      </h1>
+      <p class="mt-4 text-lg max-w-xl">
+        Anh có chuẩn bị một vài điều nhỏ xíu cho em.
+      </p>
+      <a href="#gift" class="mt-8 bg-pink-400 text-white px-6 py-3 rounded-full"
+        >🌷 Bắt đầu thôi</a
+      >
+    </section>
+
+    <section
+      id="gift"
+      class="min-h-screen flex flex-col justify-center items-center text-center p-6"
+    >
+      <h2 class="text-3xl font-bold mb-6">🧸 Hộp quà bất ngờ</h2>
+      <div id="giftBox" class="gift text-9xl cursor-pointer">🎁</div>
+      <div id="giftResult" class="mt-6 text-2xl"></div>
+    </section>
+
+    <section class="min-h-screen p-8">
+      <h2 class="text-3xl font-bold text-center mb-10">📸 Album Kỷ Niệm</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="polaroid bg-white p-3 rounded shadow" style="--r: -6deg">
+          <img
+            src="assets/photos/1.jpg"
+            class="w-full h-64 object-cover rounded"
+          />
+          <p class="mt-2 text-center">Lần đầu đi chơi cùng nhau ❤️</p>
+        </div>
+        <div class="polaroid bg-white p-3 rounded shadow" style="--r: 5deg">
+          <img
+            src="assets/photos/2.jpg"
+            class="w-full h-64 object-cover rounded"
+          />
+          <p class="mt-2 text-center">Tấm này em cười xinh quá 🌷</p>
+        </div>
+        <div class="polaroid bg-white p-3 rounded shadow" style="--r: -4deg">
+          <img
+            src="assets/photos/3.jpg"
+            class="w-full h-64 object-cover rounded"
+          />
+          <p class="mt-2 text-center">Anh lưu ảnh này từ hôm đó tới giờ ✨</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-screen flex justify-center items-center p-6">
+      <div class="bg-white rounded-3xl shadow-xl p-8 max-w-xl text-center">
+        <h2 class="text-3xl font-bold mb-4">💌 Lá Thư Nhỏ</h2>
+        <p>
+          Cảm ơn em vì đã xuất hiện.<br /><br />
+          Cảm ơn em vì những ngày bình thường cũng trở nên vui hơn.<br /><br />
+          Anh vẫn nhớ những tấm ảnh chúng mình chụp cùng nhau.<br /><br />
+          Và anh mong sẽ còn được cùng em tạo thêm thật nhiều kỷ niệm nữa. ❤️
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="min-h-screen relative flex flex-col justify-center items-center text-center bg-slate-900 text-white overflow-hidden"
+    >
+      <div class="star" style="top: 10%; left: 20%">⭐</div>
+      <div class="star" style="top: 30%; left: 70%">⭐</div>
+      <div class="star" style="top: 60%; left: 40%">⭐</div>
+      <div class="shooting">🌠</div>
+      <h2 class="text-4xl font-bold">Phần thưởng cuối cùng là...</h2>
+      <p class="text-3xl mt-6">
+        chồn thơm cho cái nè hehe nay hơi bận nên chồn làm được mỗi vậy mong
+        thúi thúi không buồn chồn chồn
+      </p>
+      <button
+        onclick="acceptDate()"
+        class="mt-8 bg-pink-500 px-6 py-3 rounded-full"
+      >
+        Dạ thối thối không buồn đâu ạ hihi
+      </button>
+    </section>
+
+    <audio id="haianh" loop>
+      <source src="assets/haianh.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button
+      onclick="toggleMusic()"
+      style="position: fixed; right: 20px; bottom: 20px"
+      class="bg-white px-4 py-2 rounded-full shadow"
+    >
+      🎵 Nhạc
+    </button>
+
+    <script>
+      const gifts = [
+        "🧸 Một bé gấu bông",
+        "Một bát tào phớ trân châu caramen",
+        "🍫 Một thanh socola",
+        "🐱 Một bé mèo ú",
+        "🫂 Một cái ôm miễn phí",
+        "🍜 Một buổi hẹn cùng anh",
+        "💌 Một lời chúc bí mật",
+      ];
+
+      document.getElementById("giftBox").onclick = () => {
+        const g = gifts[Math.floor(Math.random() * gifts.length)];
+        document.getElementById("giftResult").innerHTML =
+          "Chúc mừng em nhận được:<br><b>" + g + "</b> 🎉";
+      };
+
+      function toggleMusic() {
+        const audio = document.getElementById("haianh");
+        const button = document.querySelector(
+          "button[onclick='toggleMusic()']",
+        );
+
+        if (audio.paused) {
+          audio
+            .play()
+            .then(() => {
+              button.innerHTML = "⏸ Tạm dừng";
+            })
+            .catch((error) => {
+              console.log("Trình duyệt chặn tự động phát: ", error);
+              alert(
+                "Bạn hãy click vào màn hình một cái rồi bấm lại nút Nhạc nha!",
+              );
+            });
+        } else {
+          audio.pause();
+          button.innerHTML = "🎵 Nhạc";
+        }
+      }
+
+      function acceptDate() {
+        alert("Dạ thúi thúi ko buồn chồn đâu hihi");
+      }
+    </script>
+  </body>
+</html>
